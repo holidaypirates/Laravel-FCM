@@ -99,7 +99,7 @@ class TopicResponse extends BaseResponse implements TopicResponseContract{
 		$logger->pushHandler(new StreamHandler(storage_path('logs/laravel-fcm.log')));
 
 		$topic = $this->topic->build();
-		$logMessage = "notification send to topic: $topic";
+		$logMessage = 'notification send to topic: ' . json_encode($topic);
 		if ($this->messageId) {
 			$logMessage .= "with success (message-id : $this->messageId)";
 		}
