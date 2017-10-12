@@ -71,7 +71,7 @@ abstract class BaseRequest
      * @param $server_key
      * @param $sender_id
      */
-    public function overwriteServerKeyAndSenderId($server_key, $sender_id)
+    protected function overwriteServerKeyAndSenderId($server_key, $sender_id)
     {
         $this->config['server_key'] = $server_key;
         $this->config['sender_id'] = $sender_id;
